@@ -12,7 +12,7 @@ class VibrationAnalyzer:
             raise ValueError("Invalid axis specified. Please specify either 'x', 'y', or 'z'.")
         # Define the filter parameters
         order = 3  # filter order
-        cutoff_freq = 5000  # cutoff frequency in Hz
+        cutoff_freq = 7000  # cutoff frequency in Hz
         nyquist_freq = 0.5 * self.sampling_freq  # Nyquist frequency
         normalized_cutoff_freq = cutoff_freq / nyquist_freq  # normalized cutoff frequency
         self.b, self.a = butter(order, normalized_cutoff_freq, btype='lowpass')  # filter coefficients
